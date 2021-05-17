@@ -1,0 +1,115 @@
+<div class="mdiv">
+  <a href='index.html' fxFlex>
+  <img class="tlogo" src="../../assets/img/filed-logo-01.png"></a>
+  <h3 align="center" class="h3"> Our AI-Powered Software Will Exceed Your Marketing Goals.</h3>
+  <img class="clogo" src="../../assets/img/image.png">
+  <h4> Benefits of using Filed?</h4>
+  
+  <p> Ability to scale using Dexter, our AI-powered marketing genius.
+       You’ll also <br/> get a Client Success Manager who will optimize your 
+       Facebook ad <br/> campaigns and focus on driving the best possible results for you. This is a <br/><span align='center' >limited time offer only.</span></p>
+  
+  <img class="artboard" src="../../assets/img/Artboard 1.png">
+  
+  <div class="matcard">
+      <mat-card class="incard">
+          <mat-card-title align='center'> Payment </mat-card-title>
+          <mat-card-subtitle align='center'> Fill in the details</mat-card-subtitle>
+          <form fxLayout="column" fxLayout.xs="column" [formGroup]="paymentForm" (ngSubmit)="onSubmit()" > <br />
+              <div fxLayout="row" fxLayoutGap="2%">
+                  <mat-form-field appearance="outline" class="form">
+                    <mat-label style="font-size: small;">Amount*</mat-label>
+                    <input matInput class="form-control" type="text" formControlName="amount" [ngClass]="{ 'is-invalid': (formControls.amount.dirty || formControls.amount.touched) && formControls.amount.errors }">
+                    <div *ngIf="!formControls.amount.valid && (formControls.amount.dirty || formControls.amount.touched)" class="invalid-feedback">
+                        <div *ngIf="formControls.amount.errors"><span style="color: red;">Invalid Amount.</span></div>
+                    </div>
+                  </mat-form-field>
+                  </div>
+              <div fxLayout="row" fxLayoutGap="2%">
+                <mat-form-field appearance="outline" class="form">
+                  <mat-label style="font-size: small;">Card Number*</mat-label>
+                  <!-- <input matInput formControlName="cardNo" minlength="14" maxlength="14" [pattern]="'[789][0-9]{9}'"/> -->
+                  <input matInput class="form-control" type="number" formControlName="cardNumber" placeholder="1234123412341234" [ngClass]="{ 'is-invalid': formControls.cardNumber.errors  && (formControls.cardNumber.dirty || formControls.cardNumber.touched)}">
+                  <div *ngIf="!formControls.cardNumber.valid && (formControls.cardNumber.dirty || formControls.cardNumber.touched)" class="invalid-feedback">
+                      <div *ngIf="formControls.cardNumber.errors" ><span style="color: red;">Invalid Card Number.</span></div>
+                  </div>
+                </mat-form-field>
+                </div>
+                <div fxLayout="row" fxLayoutGap="2%">
+                  <mat-form-field appearance="outline" class="form">
+                    <mat-label style="font-size: small;">Name on Card*</mat-label>
+                    <!-- <input
+                      matInput formControlName="name"
+                    /> -->
+                    <input matInput class="form-control" type="text" formControlName="nameOnCard" placeholder="John Krane" [ngClass]="{ 'is-invalid': (formControls.nameOnCard.dirty || formControls.nameOnCard.touched) && formControls.nameOnCard.errors }">
+                    <div *ngIf="!formControls.nameOnCard.valid && (formControls.nameOnCard.dirty || formControls.nameOnCard.touched)" class="invalid-feedback">
+                        <div *ngIf="formControls.nameOnCard.errors"><span style="color: red;">Invalid Cardholder Name.</span></div>
+                    </div>
+                  </mat-form-field>
+                  </div>
+                  <div fxLayout="row" fxLayoutGap="2%">
+                      <mat-form-field appearance="outline" placeholder=" " class="form">
+                        <mat-label style="font-size: small;">Expiry Date*</mat-label>
+                        <!-- <input
+                          matInput formControlName="expiredate"
+                        /> --> <br/>
+                          <div class="row">
+                            <mat-form-field appearance="outline" >
+                              <mat-label style="font-size: small;" for="expiry-month">Month</mat-label>
+                
+                              <mat-select class="form-control col-sm-2" formControlName="expirationMonth" id="expiry-month" [ngClass]="{ 'is-invalid': !formControls.expirationMonth.valid && (formControls.expirationMonth.dirty || formControls.expirationMonth.touched) }">
+                                <mat-option>Month</mat-option>
+                                <mat-option value="01">Jan (01)</mat-option>
+                                <mat-option value="02">Feb (02)</mat-option>
+                                <mat-option value="03">Mar (03)</mat-option>
+                                <mat-option value="04">Apr (04)</mat-option>
+                                <mat-option value="05">May (05)</mat-option>
+                                <mat-option value="06">June (06)</mat-option>
+                                <mat-option value="07">July (07)</mat-option>
+                                <mat-option value="08">Aug (08)</mat-option>
+                                <mat-option value="09">Sep (09)</mat-option>
+                                <mat-option value="10">Oct (10)</mat-option>
+                                <mat-option value="11">Nov (11)</mat-option>
+                                <mat-option value="12">Dec (12)</mat-option>
+                              </mat-select>
+                            </mat-form-field>
+                            &nbsp;&nbsp;                            
+                            <mat-form-field appearance="outline" for="expiry-year">
+                              <mat-label style="font-size: small;">Year</mat-label>
+                              <mat-select class="form-control" formControlName="expirationYear" id="expiry-year" [ngClass]="{ 'is-invalid': formControls.expirationYear.errors && (formControls.expirationYear.dirty || formControls.expirationYear.touched) }" >
+                                <mat-option value="2020">2020</mat-option>
+                                <mat-option value="2021">2021</mat-option>
+                                <mat-option value="2022">2022</mat-option>
+                                <mat-option value="2023">2023</mat-option>
+                                <mat-option value="2024">2024</mat-option>
+                                <mat-option value="2025">2025</mat-option>
+                              </mat-select>
+                            </mat-form-field>
+                            
+                            <div *ngIf="( !formControls.expirationMonth.valid && (formControls.expirationMonth.dirty || formControls.expirationMonth.touched) ) || ( !formControls.expirationYear.valid && (formControls.expirationYear.dirty || formControls.expirationYear.touched))" class="invalid-feedback">
+                              <div *ngIf="formControls.expirationMonth.errors || formControls.expirationYear.errors" ><span style="color: red;">Invalid Date of Expiration.</span></div>
+                          </div>
+                         </div>
+                      
+                      </mat-form-field>
+                      </div>
+                      <div fxLayout="row" fxLayoutGap="2%">
+                          <mat-form-field appearance="outline" class="form">
+                            <mat-label style="font-size: small;">CVV*</mat-label>
+                            <!-- <input
+                              matInput formControlName="cvv"
+                            /> -->
+                            <input matInput class="form-control" type ='number' formControlName="cardCVVNumber" placeholder="123" [ngClass]="{ 'is-invalid': formControls.cardCVVNumber.errors && (formControls.cardCVVNumber.dirty || formControls.cardCVVNumber.touched) }">
+                            <div *ngIf="!formControls.cardCVVNumber.valid && (formControls.cardCVVNumber.dirty || formControls.cardCVVNumber.touched)" class="invalid-feedback">
+                                <div *ngIf="formControls.cardCVVNumber.errors"><span style="color: red;"> CVV / CVC Number. </span> </div>
+                            </div>
+                          </mat-form-field>
+                          </div>
+               <button mat-raised-button class="forminput" [disabled]="!paymentForm.valid" type="submit" color="warn">
+                              Pay Amount {{paymentForm.value.amount}}
+                            </button>
+          </form>
+      </mat-card>
+  </div>
+  </div>
+

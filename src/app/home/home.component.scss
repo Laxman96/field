@@ -1,0 +1,56 @@
+// @media screen and (max-width: 767px) {
+
+//     .card-container > *:not(.circle-link) ,
+//     .terminal {
+//       width: 100%;
+//     }
+  
+//     .card:not(.highlight-card) {
+//       height: 16px;
+//       margin: 8px 0;
+//     }
+  
+//     .card.highlight-card span {
+//       margin-left: 72px;
+//     }
+  
+//     svg#rocket-smoke {
+//       right: 120px;
+//       transform: rotate(-5deg);
+//     }
+//   }
+  
+//   @media screen and (max-width: 575px) {
+//     svg#rocket-smoke {
+//       display: none;
+//       visibility: hidden;
+//     }
+//   }
+.kl{
+    position: relative;
+    left: -9px;
+  }
+
+  table {
+    
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+@media screen and (max-width: 575px) {
+  svg#rocket-smoke {
+    display: none;
+    visibility: hidden;
+  }
+}

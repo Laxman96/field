@@ -1,0 +1,121 @@
+// .padding {
+//   padding: 5rem !important;
+//   margin-left: 300px
+// }
+
+// .card {
+//   margin-bottom: 1.5rem
+// }
+
+// .card {
+//   position: relative;
+//   display: -ms-flexbox;
+//   display: flex;
+//   -ms-flex-direction: column;
+//   flex-direction: column;
+//   min-width: 0;
+//   word-wrap: break-word;
+//   background-color: #fff;
+//   background-clip: border-box;
+//   border: 1px solid #c8ced3;
+//   border-radius: .25rem
+// }
+
+// .card-header:first-child {
+//   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0
+// }
+
+// .card-header {
+//   padding: .75rem 1.25rem;
+//   margin-bottom: 0;
+//   background-color: #f0f3f5;
+//   border-bottom: 1px solid #c8ced3
+// }
+
+// .card-body {
+//   flex: 1 1 auto;
+//   padding: 1.25rem
+// }
+
+// .form-control:focus {
+//   color: #5c6873;
+//   background-color: #fff;
+//   border-color: #c8ced3 !important;
+//   outline: 0;
+//   box-shadow: 0 0 0 #F44336
+// }
+
+
+
+
+
+
+//  //////////////////////////////////////////
+.mdiv{
+  position: static;
+  background-color:   #c2daee;
+  
+
+}
+h3{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: xx-large;
+  margin-top: -20px;
+}
+
+h4{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: larger;
+  margin-top: 50px;
+  margin-left: 127px;
+  right: 49px;
+}
+p{
+  margin-left: 120px;
+}
+
+.tlogo{
+  position: relative;
+  height: 50px;
+  width: 150px;
+  left: 30px;
+  top: 20px;
+
+}
+
+.clogo{
+  // text-align: center;
+  position:relative;
+  // border:#ffffff solid 6px;
+  // // border-radius:30%;
+  height: 250px;
+  width: 1h20px;
+  left:360px;
+  top: 50px;
+  
+
+}
+
+.artboard{
+  position: relative;
+  width: 350px;
+  height: 220px;
+  left:250px ;
+  top: -50%;
+}
+
+.matcard{
+  position: absolute;    
+  width: 550px;
+  left: 850px;
+  top: 130px
+}
+.incard{
+  background:#FBFBFB 0% 0% no-repeat padding-box;
+  border: 50px !important;
+  border-radius: 45px !important;
+  border: rgb(62, 21, 138) !important;
+}
+.form{
+  width: 520px;
+}

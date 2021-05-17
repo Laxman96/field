@@ -1,0 +1,42 @@
+<mat-card style="height: 100%">
+  
+  <div>  
+    <a href='index.html' fxFlex>
+    <img src="../../assets/img/filed-logo-01.png"> </a>
+    <div align='center'> 
+        <h2> AI Powered Advertising Intelligent Automation <br> Real-time Insights. Unparalleled Results.</h2>
+    </div>
+    <div align='center'>
+      <button mat-flat-button color="primary" (click)="regnav()">Register</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button mat-flat-button color="primary" (click)="navigate()">Make Payment</button>
+        <br/><br/>
+        <table align="right">
+          <tr>
+            <th>Name</th>
+            <th>Card No.</th>
+            <th>Expiry Date</th>
+            <th> CVV</th>
+            <th> Amount</th>
+          </tr>
+          <tr>
+            <td>{{tbdata.cardHolder}}</td>
+            <td>{{tbdata.creditCardNumber}}</td>
+            <td>{{expdate}}</td>
+            <td>{{tbdata.securityCode}}</td>
+            <td>{{tbdata.amount}}</td>
+          </tr>
+          </table>  
+          <div class="view-container">
+            <toaster-container [toasterconfig]="toasterConfig"></toaster-container>  
+            <div ng-view class="view-frame"></div>
+          </div>
+    </div>
+  </div>
+  <div>
+  <img class="abimg" src="../../assets/img/Screenshot 2020-09-03 at 11.03.40.png">
+  
+    </div>
+
+
+
+</mat-card>
